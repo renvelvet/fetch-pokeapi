@@ -20,6 +20,13 @@ const DetailPoke = styled.div`
     font-weight: 400;
   }
 `;
+const Table = styled.table`
+  & th {
+    background-color: black;
+    color: white;
+    padding: 3px 70px;
+  }
+`;
 function DetailPokemon() {
   const { name } = useParams();
 
@@ -54,7 +61,7 @@ function DetailPokemon() {
       </div>
 
       <div>
-        <table>
+        <Table>
           <tr>
             <th>Base Statistic</th>
             <th>Expertise</th>
@@ -68,9 +75,9 @@ function DetailPokemon() {
                 </tr>
               );
             })}
-        </table>
+        </Table>
 
-        <table>
+        <Table>
           <tr>
             <th>Abilities</th>
           </tr>
@@ -82,9 +89,9 @@ function DetailPokemon() {
                 </tr>
               );
             })}
-        </table>
+        </Table>
 
-        <table>
+        <Table>
           <tr>
             <th>Moves</th>
           </tr>
@@ -96,7 +103,7 @@ function DetailPokemon() {
                 </tr>
               );
             })}
-        </table>
+        </Table>
       </div>
     </DetailPoke>
   );
